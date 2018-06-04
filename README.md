@@ -2,6 +2,7 @@
 a simple retrieval-based chatbot.
 
 # 环境
+- python: 3.6
 - pytorch: 0.4.0
 - numpy: 1.14.0
 - jieba: 0.39
