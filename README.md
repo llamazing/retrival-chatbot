@@ -17,6 +17,6 @@ python cli.py data save
 ```
 # 问答
 ```
-python inference.py "小米空气净化器2效果如何"
+python qa_demo.py "小米空气净化器2效果如何"
 # 输出: 您好，小米空气净化器2颗粒物CADR高达310m^3/h
 ```
