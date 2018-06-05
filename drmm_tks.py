@@ -81,7 +81,7 @@ class Evaluator(object):
         correct = 0
         nums = 0
         for batch in eval_data:
-            nums += self.batch_size
+            nums += len(batch.id)
             if torch.cuda.is_available():
                 q1 = batch.q1.cuda()
                 q2 = batch.q2.cuda()
@@ -99,7 +99,7 @@ class Evaluator(object):
             _, pred = torch.topk(logits, 1, dim=1)
             correct += torch.sum(torch.eq(label, pred.squeeze(1)).int()).item()
             total_loss += loss.item()
-            total_step += self.batch_size 
+            total_step += 1
         return total_loss / total_step, correct / nums
 
 
